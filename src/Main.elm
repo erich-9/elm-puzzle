@@ -249,7 +249,7 @@ imgTile ( c, r ) =
     config.imgSrc
       |> croppedImage ( c * ws + xs, (config.rows - r - 1) * hs + ys ) ws hs
       |> toForm
-      |> scale (1 / s)
+      |> scale (1 / toFloat s)
 
 
 shuffledIndices : Array Index
