@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Elm Puzzle</title>
+    <meta charset="utf-8">
+    <style>
+      body
+      {
+        margin: 5%;
+        width: 90%;
+        height: 90%;
+        background-color: #fafafa;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+      }
+
+      div#puzzle
+      {
+        margin: auto;
+        width: 420px;
+        height: 420px;
+        border: solid #ccc 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="puzzle"></div>
+    <script src="elm.js"></script>
+    <script>
+
+      var puzzleDiv = document.getElementById('puzzle');
+      var randomInt = Math.floor((Math.random() - 0.5) * (1 << 31));
+
+      Elm.embed(Elm.Main, puzzleDiv, { randomInt : randomInt });
+
+    </script>
+  </body>
+
+</html>
