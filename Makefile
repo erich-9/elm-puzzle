@@ -25,4 +25,5 @@ $(ELM_OUTPUT): $(ELM_SOURCES)
 
 .patched: $(ELM_OUTPUT)
 	patch < remove-flicker.patch
+	patch < mouse-isdown.patch
 	touch .patched
