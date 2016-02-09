@@ -165,7 +165,7 @@ initPos cr' cr =
       ( toFloatVec cr, toFloatVec cr' )
 
     ( dx, dy ) =
-      ( mx / (rows + 1), my / (cols + 1) )
+      ( mx / (cols + 1), my / (rows + 1) )
 
     ( mx, my ) =
       toFloatVec ( config.canvasWidth - width, config.canvasHeight - height )
